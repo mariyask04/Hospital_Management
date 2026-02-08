@@ -1,0 +1,85 @@
+# =========================
+# Dependencies
+# =========================
+node_modules/
+.pnp
+.pnp.js
+
+# =========================
+# Environment files
+# =========================
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Next.js
+# =========================
+.next/
+out/
+build/
+
+# =========================
+# Backend (Node / Express)
+# =========================
+dist/
+coverage/
+
+# =========================
+# MongoDB
+# =========================
+data/
+*.mongodb
+
+# =========================
+# Uploads (if using Multer)
+# =========================
+uploads/
+temp/
+
+# =========================
+# OS / Editor files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE / Editor configs
+# =========================
+.vscode/
+.idea/
+*.swp
+
+# =========================
+# TypeScript (if you add later)
+# =========================
+*.tsbuildinfo
+
+# =========================
+# Cache
+# =========================
+.cache/
+.eslintcache
+
+# =========================
+# Testing
+# =========================
+.nyc_output/
+
+# =========================
+# Misc
+# =========================
+*.pem
+*.key
