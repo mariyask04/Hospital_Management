@@ -16,6 +16,10 @@ const patientSchema = new mongoose.Schema({
     },
     diagnosis: {
         type: String
+    },
+    contact: {
+        type: String,
+        required: true
     }
 }, { timestamps: true });
 

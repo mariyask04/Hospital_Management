@@ -3,20 +3,25 @@ import mongoose from "mongoose";
 const otScheduleSchema = new mongoose.Schema({
     date: {
         type: Date,
+        required: true
     },
     otNumber: {
         type: Number,
+        required: true
     },
     anesthesiaType: {
-        type: String
+        type: String,
+        required: true
     },
     anesthesiologist: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Doctor"
+        ref: "Doctor",
+        required: true
     },
     surgeon: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Doctor"
+        ref: "Doctor",
+        required: true
     },
     assistantSurgeon: {
         type: mongoose.Schema.Types.ObjectId,
@@ -27,7 +32,8 @@ const otScheduleSchema = new mongoose.Schema({
     },
     patient: {
         type: mongoose.Types.ObjectId,
-        ref: "Patient"
+        ref: "Patient",
+        required: true
     },
     preOpNotes: {
         type: String
@@ -44,7 +50,7 @@ const otScheduleSchema = new mongoose.Schema({
         default: "Scheduled"
     },
     requiredResources: {
-        drigs: [String],
+        drugs: [String],
         instruments: [String],
         materials: [String]
     }
