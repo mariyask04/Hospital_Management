@@ -1,6 +1,6 @@
 import OTSchedule from "../models/OTSchedule.model.js";
 import Patient from "../models/Patient.model.js";
-import Report from "../models/Report.model";
+import Report from "../models/Report.model.js";
 
 const createReport = async (req, res) => {
     try {
