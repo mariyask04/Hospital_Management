@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { api, getApiErrorMessage } from "../../lib/api";
+import ReportsTab from "@/components/ReportsTab";
 
 const tabs = [
   { id: "overview", label: "Overview" },
@@ -762,11 +763,10 @@ export default function DashboardPage() {
             <button
               key={tab.id}
               onClick={() => handleTabChange(tab.id)}
-              className={`flex-1 rounded-lg px-3 py-2 text-xs font-medium transition ${
-                activeTab === tab.id
-                  ? "bg-emerald-500 text-white shadow-sm"
-                  : "text-slate-600 hover:bg-slate-50"
-              }`}
+              className={`flex-1 rounded-lg px-3 py-2 text-xs font-medium transition ${activeTab === tab.id
+                ? "bg-emerald-500 text-white shadow-sm"
+                : "text-slate-600 hover:bg-slate-50"
+                }`}
             >
               {tab.label}
             </button>
@@ -1735,23 +1735,7 @@ export default function DashboardPage() {
           </section>
         )}
 
-        {activeTab === "reports" && (
-          <section className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-            <h2 className="text-sm font-semibold text-slate-900">
-              Reports overview
-            </h2>
-            <p className="mt-1 text-xs text-slate-500">
-              Reports are linked to OT schedules and patients. Use your backend
-              API to create and manage detailed clinical reports and
-              attachments.
-            </p>
-            <div className="mt-4 rounded-xl border border-dashed border-slate-300 bg-slate-50 px-4 py-3 text-xs text-slate-600">
-              For a full reports UI (filters by patient, schedule, type), we
-              can extend this section, but the current dashboard is already
-              compatible with the existing `/api/report` endpoints.
-            </div>
-          </section>
-        )}
+        {activeTab === "reports" && <ReportsTab />}
       </main>
     </div>
   );
